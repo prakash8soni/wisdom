@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Example Gift Card",
+    "url": "https://example-offer.com/your-aff-id",
+    "payout": 1.50,
+    "weight": 50,
+    "niche": "sweepstakes",
+    "added": "2026-03-02T00:00:00",
+    "clicks": 0,
+    "conversions": 0
+  }
+]
