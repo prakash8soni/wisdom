@@ -1,0 +1,25 @@
+# Secrets - NEVER commit these
+*.pem
+*.key
+.env
+.env.*
+secrets/
+.secrets
+
+# Token patterns
+ghp_*
+github_pat_*
+*_token
+*_TOKEN
+
+# OpenClaw internal
+.openclaw/workspace-state.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
