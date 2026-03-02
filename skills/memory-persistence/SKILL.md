@@ -104,12 +104,29 @@ The GitHub Actions workflow will also auto-backup hourly.
 3. **Pattern recognition**: Identify recurring themes in user interactions
 4. **Skill updates**: Improve this skill based on experience
 
+## Memory Systems
+
+### 1. File-Based Memory (Primary)
+- **Daily logs:** `memory/YYYY-MM-DD.md`
+- **Long-term:** `MEMORY.md`
+- **GitHub backup:** Automatic hourly + on commits
+
+### 2. Mem0 Intelligent Memory (Enhanced)
+- **Vector database:** Semantic search across all memories
+- **Smart retrieval:** Context-aware memory recall
+- **Location:** `~/.openclaw/workspace/memory/mem0_db/`
+
 ## Quick Commands
 
 ```bash
-# Add memory entry
+# File-based memory (fast, simple)
 echo "\n## $(date '+%H:%M') - Event description" >> memory/$(date '+%Y-%m-%d').md
 
-# Commit and push memory
+# Mem0 intelligent memory (semantic search)
+/root/.openclaw/venv/bin/python scripts/mem0_client.py add "Important memory content"
+/root/.openclaw/venv/bin/python scripts/mem0_client.py search "query"
+/root/.openclaw/venv/bin/python scripts/mem0_client.py list
+
+# Git backup
 git add memory/ MEMORY.md && git commit -m "Update memory" && git push
 ```
